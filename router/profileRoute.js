@@ -6,10 +6,7 @@ const User = require('../models/userModel');
 
 // Middleware for user authentication (you should implement this).
 const authenticateUser = (req, res, next) => {
-  // Implement user authentication here (e.g., using JWT, session, or other methods).
-  // Verify the user's token or session and set user information in req.user.
-  // If authentication fails, respond with an error.
-
+  
   next();
 };
 
@@ -17,7 +14,7 @@ const authenticateUser = (req, res, next) => {
 router.get('/profile', authenticateUser, async (req, res) => {
   try {
     // Retrieve user data from the authenticated user in req.user.
-    const user = req.user; // This assumes you've set the user in the authentication middleware.
+    const user = req.user; 
 
     res.json({ user });
   } catch (error) {
@@ -32,7 +29,7 @@ router.post('/update-profile', authenticateUser, async (req, res) => {
     const { name, email, bio, profileImage } = req.body;
     const user = req.user; // Assuming user data is available in req.user.
 
-    // Update the user's profile data in the database, e.g., using Mongoose for MongoDB.
+  
     user.name = name;
     user.email = email;
     user.bio = bio;
