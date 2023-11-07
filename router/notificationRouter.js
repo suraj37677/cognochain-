@@ -1,7 +1,5 @@
 const express = require('express');
 const router = express.Router();
-
-// Import the User model, Notification model, and any other necessary dependencies.
 const User = require('../models/userModel');
 const Notification = require('../models/notificationModel');
 
