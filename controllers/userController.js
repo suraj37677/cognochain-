@@ -1,10 +1,10 @@
-// Import the User model and any other necessary dependencies.
+
 const User = require('../models/userModel');
 
-// Function to get user profile data
+
 exports.getProfile = async (req, res) => {
   try {
-    const user = req.user; // Assuming user data is available in req.user.
+    const user = req.user; 
 
     res.json({ user });
   } catch (error) {
