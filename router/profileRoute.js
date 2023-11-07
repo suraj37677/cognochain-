@@ -1,10 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-// Import the User model and any other necessary dependencies.
-const User = require('../models/userModel');
 
-// Middleware for user authentication (you should implement this).
+const User = require('../models/userModel');
 const authenticateUser = (req, res, next) => {
   
   next();
