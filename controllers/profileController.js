@@ -1,7 +1,5 @@
-// Import the User model and any other necessary dependencies.
-const User = require('../models/userModel');
 
-// Function to update user profile details
+const User = require('../models/userModel');
 exports.updateProfile = async (req, res) => {
   try {
     const { name, email, bio } = req.body;
