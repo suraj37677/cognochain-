@@ -1,0 +1,25 @@
+{
+  "name": "cognochainassesment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node server.js",
+    "client":"npm start --prefix ./frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+    
+  },
+  "author": "suraj kumar sahoo",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.6.4",
+    "nodemon": "^3.0.1"
+  }
+}
