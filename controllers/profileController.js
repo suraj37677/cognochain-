@@ -5,9 +5,9 @@ const User = require('../models/userModel');
 exports.updateProfile = async (req, res) => {
   try {
     const { name, email, bio } = req.body;
-    const user = req.user; // Assuming user data is available in req.user.
+    const user = req.user;
 
-    // Update the user's profile data in the database, e.g., using Mongoose for MongoDB.
+    
     user.name = name;
     user.email = email;
     user.bio = bio;
@@ -31,8 +31,8 @@ exports.uploadProfilePicture = async (req, res) => {
       return res.status(400).json({ error: 'No image file uploaded' });
     }
 
-    // Store the image file path or data in the user's profile in the database.
-    user.profileImage = uploadedImage.path; // Adjust this based on your file storage method.
+  
+    user.profileImage = uploadedImage.path; 
 
     await user.save();
 
